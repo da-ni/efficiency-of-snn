@@ -1,0 +1,31 @@
+[paths]
+dataset_path = %(path_wd)s/../../../data/mnist
+filename_ann = MediumCNN
+log_dir_of_current_run = ../../SNN/mnist/MediumCNN
+
+[tools]
+evaluate_ann = True
+normalize = True
+converte = True
+sumulate = True
+
+[simulation]
+simulator = INI
+duration = 100
+num_to_test = 300
+batch_size = 30
+keras_backend = tensorflow
+
+[normalization]
+percentile = 99.00
+online_normalization = True
+
+[conversion]
+max2avg_pool = True
+
+[input]
+poisson_input = False
+
+[output]
+log_vars = {'all'}
+plot_vars = {'all'}
